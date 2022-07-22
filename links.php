@@ -4,7 +4,7 @@
 <!--Links-->
 <link rel="stylesheet" href="assets/css/index.css">
 <link rel="stylesheet" href="node_modules/boxicons/css/boxicons.min.css">
-<link rel="stylesheet" href="node_modules/jquery-smarttab/dist/css/smart_tab_all.css">
+<link rel="stylesheet" href="assets/css/smart_tab_all.min.css">
 <link rel="stylesheet" href="assets/persianDatepicker-master/css/persianDatepicker-default.css">
 
 

@@ -8,41 +8,36 @@
 * Licensed under the terms of the MIT License
 * https://github.com/techlab/jquery-smarttab/blob/master/LICENSE
 */
-/* Variables */
-/* Root */
 :root {
     --st-background: unset;
-    --st-border: 1px solid red;
+    --st-border: 1px solid #145858;
     --st-anchor-default-primary-color: #60bef5;
     --st-anchor-default-secondary-color: #dbe0e5;
-    --st-anchor-active-primary-color: #009EF7;
+    --st-anchor-active-primary-color: red;
     --st-anchor-active-secondary-color: #ffffff;
     --st-anchor-disabled-primary-color: #eeeeee;
     --st-anchor-disabled-secondary-color: #dbe0e5;
     --st-loader-color: #009EF7;
     --st-loader-background-color: #f8f9fa;
-    --st-loader-background-wrapper-color: rgba(255, 255, 255, 0.7);
+    --st-loader-background-wrapper-color: rgba(255, 255, 255, 0.7)
 }
 
-/* Base Styles */
 .st {
-    position: relative;
+    position: relative
 }
 
-.st *,
-.st *::before,
-.st *::after {
-    box-sizing: border-box;
+.st *, .st ::after, .st ::before {
+    box-sizing: border-box
 }
 
 .st > .tab-content {
     position: relative;
     overflow: hidden;
-    height: auto;
+    height: auto
 }
 
 .st > .tab-content > .tab-pane {
-    padding: 0.8rem;
+    padding: .8rem
 }
 
 .st > .nav {
@@ -51,75 +46,75 @@
     list-style: none;
     padding-left: 0;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 0
 }
 
 @media screen and (max-width: 640px) {
     .st > .nav {
         flex-direction: column !important;
-        flex: 1 auto;
+        flex: 1 auto
     }
 }
 
 .st > .nav .nav-link {
     position: relative;
     display: block;
-    padding: 0.5rem 1rem;
+    padding: .5rem 1rem;
     height: 100%;
     min-height: 100%;
-    text-decoration: none;
+    text-decoration: none
 }
 
-.st > .nav .nav-link:hover, .st > .nav .nav-link:active, .st > .nav .nav-link:focus {
-    text-decoration: none;
+.st > .nav .nav-link:active, .st > .nav .nav-link:focus, .st > .nav .nav-link:hover {
+    text-decoration: none
 }
 
 .st > .nav .nav-link::-moz-focus-inner {
-    border: 0;
+    border: 0
 }
 
 .st > .nav .nav-link.disabled {
     pointer-events: none;
-    cursor: not-allowed;
+    cursor: not-allowed
 }
 
 .st > .nav .nav-link.hidden {
     display: none;
-    visibility: none;
+    visibility: none
 }
 
 .st.st-vertical {
     display: flex !important;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap
 }
 
 .st.st-vertical > .nav {
     flex-direction: column !important;
-    flex: 1 auto;
+    flex: 1 auto
 }
 
 .st.st-vertical > .nav .nav-link {
-    text-align: left;
+    text-align: left
 }
 
-.st.st-vertical > .nav > li, .st.st-vertical > .nav .nav-link {
-    flex-grow: unset !important;
+.st.st-vertical > .nav .nav-link, .st.st-vertical > .nav > li {
+    flex-grow: unset !important
 }
 
 .st.st-vertical > .tab-content {
-    flex: 1 100%;
+    flex: 1 100%
 }
 
-.st.st-justified > .nav > li, .st.st-justified > .nav .nav-link {
+.st.st-justified > .nav .nav-link, .st.st-justified > .nav > li {
     flex-basis: 0;
     flex-grow: 1;
-    text-align: center;
+    text-align: center
 }
 
 .st.st-loading {
     -webkit-user-select: none;
     -moz-user-select: none;
-    user-select: none;
+    user-select: none
 }
 
 .st.st-loading::after {
@@ -132,7 +127,7 @@
     height: 100%;
     width: 100%;
     background: var(--st-loader-background-wrapper-color);
-    z-index: 2;
+    z-index: 2
 }
 
 .st.st-loading::before {
@@ -148,44 +143,41 @@
     border-radius: 50%;
     z-index: 10;
     -webkit-animation: spin 1s linear infinite;
-    animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite
 }
 
 @-webkit-keyframes spin {
     0% {
-        transform: rotate(0deg);
+        transform: rotate(0)
     }
-
     100% {
-        transform: rotate(360deg);
+        transform: rotate(360deg)
     }
 }
 
 @keyframes spin {
     0% {
-        transform: rotate(0deg);
+        transform: rotate(0)
     }
-
     100% {
-        transform: rotate(360deg);
+        transform: rotate(360deg)
     }
 }
 
-/* Theme Styles */
 .st-theme-basic {
     border: var(--st-border);
-    background: var(--st-background);
+    background: var(--st-background)
 }
 
 .st-theme-basic > .nav {
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .1)
 }
 
 .st-theme-basic > .nav .nav-link {
     position: relative;
     height: 100%;
     min-height: 100%;
-    color: var(--st-anchor-default-primary-color);
+    color: var(--st-anchor-default-primary-color)
 }
 
 .st-theme-basic > .nav .nav-link::after {
@@ -194,83 +186,83 @@
     pointer-events: none;
     height: 2px;
     width: 0;
-    left: 0px;
+    left: 0;
     bottom: -1px;
-    transition: all 0.35s ease 0.15s;
-    width: 100%;
+    transition: all .35s ease .15s;
+    width: 100%
 }
 
 .st-theme-basic > .nav .nav-link.active {
-    color: var(--st-anchor-active-primary-color) !important;
+    color: var(--st-anchor-active-primary-color) !important
 }
 
 .st-theme-basic > .nav .nav-link.active::after {
-    background: var(--st-anchor-active-primary-color) !important;
+    background: var(--st-anchor-active-primary-color) !important
 }
 
 .st-theme-basic > .nav .nav-link.disabled {
-    color: var(--st-anchor-disabled-primary-color) !important;
+    color: var(--st-anchor-disabled-primary-color) !important
 }
 
 .st-theme-basic.st-vertical > .nav {
-    box-shadow: 0.125rem 0 0.25rem rgba(0, 0, 0, 0.1) !important;
+    box-shadow: .125rem 0 .25rem rgba(0, 0, 0, .1) !important
 }
 
 .st-theme-basic.st-vertical > .nav .nav-link::after {
     height: 100%;
     width: 2px;
-    top: 0px;
+    top: 0;
     left: unset;
     bottom: unset;
-    right: -1px;
+    right: -1px
 }
 
 .st-theme-elite {
     border-left: 1px solid var(--st-anchor-active-primary-color);
     border-right: 1px solid var(--st-anchor-active-primary-color);
     border-bottom: 1px solid var(--st-anchor-active-primary-color);
-    border-radius: 0.5em;
+    border-radius: .5em
 }
 
 .st-theme-elite > .nav {
-    background-color: #ffffff;
+    background-color: #fff;
     border-bottom: 1px solid var(--st-anchor-active-primary-color);
     margin-right: -1px;
-    margin-left: -1px;
+    margin-left: -1px
 }
 
 .st-theme-elite > .nav .nav-link {
     border: 1px solid transparent;
     border-bottom-width: 0;
-    color: var(--st-anchor-default-primary-color);
+    color: var(--st-anchor-default-primary-color)
 }
 
 .st-theme-elite > .nav .nav-link.active {
     color: var(--st-anchor-active-primary-color) !important;
     border-color: var(--st-anchor-active-primary-color) !important;
-    border-top-left-radius: 0.5em;
-    border-top-right-radius: 0.5em;
+    border-top-left-radius: .5em;
+    border-top-right-radius: .5em
 }
 
 .st-theme-elite > .nav .nav-link.active::after {
     content: "";
     position: absolute;
-    background: #ffffff;
+    background: #fff;
     height: 1px;
     width: 100%;
-    left: 0px;
-    bottom: -1px;
+    left: 0;
+    bottom: -1px
 }
 
 .st-theme-elite > .nav .nav-link.disabled {
-    color: var(--st-anchor-disabled-primary-color) !important;
+    color: var(--st-anchor-disabled-primary-color) !important
 }
 
 .st-theme-elite.st-vertical {
     border-left: unset;
     border-top: 1px solid var(--st-anchor-active-primary-color);
     border-right: 1px solid var(--st-anchor-active-primary-color);
-    border-bottom: 1px solid var(--st-anchor-active-primary-color);
+    border-bottom: 1px solid var(--st-anchor-active-primary-color)
 }
 
 .st-theme-elite.st-vertical > .nav {
@@ -279,90 +271,90 @@
     margin-top: -1px;
     margin-bottom: -1px;
     margin-right: 0;
-    margin-left: 0;
+    margin-left: 0
 }
 
 .st-theme-elite.st-vertical > .nav .nav-link {
     border-bottom-width: 1px;
-    border-right-width: 0;
+    border-right-width: 0
 }
 
 .st-theme-elite.st-vertical > .nav .nav-link.active {
-    border-top-left-radius: 0.5em;
-    border-bottom-left-radius: 0.5em;
-    border-top-right-radius: unset;
+    border-top-left-radius: .5em;
+    border-bottom-left-radius: .5em;
+    border-top-right-radius: unset
 }
 
 .st-theme-elite.st-vertical > .nav .nav-link.active::after {
     height: 100%;
     width: 1px;
-    top: 0px;
+    top: 0;
     left: auto;
-    right: -1px;
+    right: -1px
 }
 
 .st-theme-pills > .nav {
     position: relative;
     background: var(--st-anchor-default-primary-color);
-    padding: 0.3em !important;
-    border-radius: 2em;
+    padding: .3em !important;
+    border-radius: 2em
 }
 
 .st-theme-pills > .nav .nav-link {
     height: 100%;
     min-height: 100%;
     color: var(--st-anchor-default-secondary-color) !important;
-    border-radius: 2em;
+    border-radius: 2em
 }
 
 .st-theme-pills > .nav .nav-link.active {
     color: var(--st-anchor-active-secondary-color) !important;
     background: var(--st-anchor-active-primary-color);
-    box-shadow: 0px 1px 7px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 7px 1px rgba(0, 0, 0, .1)
 }
 
 .st-theme-pills > .nav .nav-link.disabled {
-    color: var(--st-anchor-disabled-secondary-color) !important;
+    color: var(--st-anchor-disabled-secondary-color) !important
 }
 
 .st-theme-brick > .nav {
     border-color: var(--st-anchor-active-primary-color);
     border-bottom-style: solid;
-    border-bottom-width: 2px;
+    border-bottom-width: 2px
 }
 
 .st-theme-brick > .nav .nav-link {
-    background: transparent;
+    background: 0 0;
     height: 100%;
     min-height: 100%;
-    color: var(--st-anchor-default-primary-color) !important;
+    color: var(--st-anchor-default-primary-color) !important
 }
 
 .st-theme-brick > .nav .nav-link.active {
     color: var(--st-anchor-active-secondary-color) !important;
     background: var(--st-anchor-active-primary-color) !important;
     border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-top-right-radius: 8px
 }
 
 .st-theme-brick > .nav .nav-link.disabled {
-    color: var(--st-anchor-disabled-primary-color) !important;
+    color: var(--st-anchor-disabled-primary-color) !important
 }
 
 .st-theme-brick.st-vertical > .nav {
     border-right-style: solid;
     border-right-width: 2px;
-    border-bottom: unset;
+    border-bottom: unset
 }
 
 .st-theme-brick.st-vertical > .nav .nav-link.active {
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
-    border-top-right-radius: unset;
+    border-top-right-radius: unset
 }
 
 .st-theme-forge > .nav {
-    border-right: 1px solid var(--st-anchor-default-secondary-color);
+    border-right: 1px solid var(--st-anchor-default-secondary-color)
 }
 
 .st-theme-forge > .nav .nav-link {
@@ -373,51 +365,51 @@
     color: var(--st-anchor-default-primary-color);
     border-style: solid;
     border-width: 3px 0 1px 1px;
-    border-color: var(--st-anchor-default-secondary-color);
+    border-color: var(--st-anchor-default-secondary-color)
 }
 
-.st-theme-forge > .nav .nav-link:hover, .st-theme-forge > .nav .nav-link:focus {
-    color: var(--st-anchor-active-primary-color) !important;
+.st-theme-forge > .nav .nav-link:focus, .st-theme-forge > .nav .nav-link:hover {
+    color: var(--st-anchor-active-primary-color) !important
 }
 
 .st-theme-forge > .nav .nav-link.active {
     color: var(--st-anchor-active-primary-color) !important;
-    border-top-color: var(--st-anchor-active-primary-color);
+    border-top-color: var(--st-anchor-active-primary-color)
 }
 
 .st-theme-forge > .nav .nav-link.active::after {
     content: "";
     position: absolute;
-    background: #ffffff;
+    background: #fff;
     height: 1px;
     width: 100%;
-    left: 0px;
-    bottom: -1px;
+    left: 0;
+    bottom: -1px
 }
 
 .st-theme-forge > .nav .nav-link.disabled {
-    color: var(--st-anchor-disabled-primary-color) !important;
+    color: var(--st-anchor-disabled-primary-color) !important
 }
 
 .st-theme-forge.st-vertical > .nav {
     border-top: 1px solid var(--st-anchor-default-secondary-color);
-    border-right: unset;
+    border-right: unset
 }
 
 .st-theme-forge.st-vertical > .nav .nav-link {
-    border-width: 0 1px 1px 3px;
+    border-width: 0 1px 1px 3px
 }
 
 .st-theme-forge.st-vertical > .nav .nav-link.active {
-    border-left-color: var(--st-anchor-active-primary-color);
+    border-left-color: var(--st-anchor-active-primary-color)
 }
 
 .st-theme-forge.st-vertical > .nav .nav-link.active::after {
     height: 100%;
     width: 1px;
-    top: 0px;
+    top: 0;
     left: auto;
-    right: -1px;
+    right: -1px
 }
 
 .st-theme-blocks > .nav .nav-link {
@@ -425,15 +417,15 @@
     height: 100%;
     min-height: 100%;
     color: var(--st-anchor-default-primary-color);
-    border-radius: 0.475rem;
+    border-radius: .475rem
 }
 
 .st-theme-blocks > .nav .nav-link.active {
-    box-shadow: 0px 1px 7px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 7px 1px rgba(0, 0, 0, .3);
     color: var(--st-anchor-active-secondary-color) !important;
-    background-color: var(--st-anchor-active-primary-color);
+    background-color: var(--st-anchor-active-primary-color)
 }
 
 .st-theme-blocks > .nav .nav-link.disabled {
-    color: var(--st-anchor-disabled-primary-color) !important;
+    color: var(--st-anchor-disabled-primary-color) !important
 }
