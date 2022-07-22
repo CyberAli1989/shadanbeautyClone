@@ -1,0 +1,134 @@
+@import "colors";
+@import "nav";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  direction: rtl;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: $color1;
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    a {
+      color: #f5f5f5;
+    }
+
+    .info {
+      ul {
+        list-style: none;
+        //padding: 8px;
+        li {
+          display: inline-block;
+          padding: 15px 20px;
+          height: 100%;
+          font-size: 12px;
+
+          &:nth-child(2) {
+            border-left: 1px solid #145f;
+            border-right: 1px solid #145f;
+          }
+        }
+      }
+    }
+
+    .social {
+      ul {
+        padding: 8px;
+        list-style: none;
+
+        li {
+          padding: 5px;
+          display: inline-block;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+}
+
+.wave {
+  background-image: url('../img/wavePatern.png');
+  width: 100%;
+  position: relative;
+  z-index: 80;
+  top: 39px;
+  height: 14.3px;
+  background-position: bottom;
+  border: none;
+  background-repeat: no-repeat;
+  margin: 25px 0;
+}
+
+#join {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 450px;
+  overflow: hidden;
+  .img{
+    flex-basis: 65%;
+
+    img{
+      width: 100%;
+    }
+  }
+  .form{
+    flex-basis: 35%;
+    background-color: $color1;
+    color: #fff;
+    form{
+      padding: 25px;
+      margin: 0 auto;
+      h2{
+        margin: 5px 0;
+        padding: 10px 25px;
+      }
+      p{
+        padding: 10px 25px;
+        line-height: 2em;
+      }
+      input{
+        margin: 25px;
+        width: 70%;
+        display: block;
+        height: 40px;
+        padding: 15px;
+      }
+    }
+  }
+}
+
+#services{
+  height: 100vh;
+  .st-theme-elite{
+    border: 1px solid crimson !important;
+  }
+  .nav{
+    background-color: $color1;
+    .nav-link{
+      color: #FFFFFF;
+      &.active{
+        color: red !important;
+      }
+    }
+  }
+
+}

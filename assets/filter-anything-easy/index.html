@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Filter Anything With jQuery Examples</title>
+<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.5.2/materia/bootstrap.min.css">
+<style>
+  body { background-color: #fafafa; }
+  </style>
+</head>
+
+<body><div id="jquery-script-menu">
+<div class="jquery-script-center">
+<ul>
+<li><a href="https://www.jqueryscript.net/other/filter-anything-easy.html">Download This Plugin</a></li>
+<li><a href="https://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
+</ul><div id="carbon-block"></div>
+<div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+<div class="container">
+  <h1>Filter Anything With jQuery Examples</h1>
+  <p class="lead">The easiest way to filter anything!</p>
+  <h2>Basic</h2>
+  <div id="easy-filter-wrap">
+      <button type="button " data-easyfilter="*" class="btn btn-info"> All </button>
+      <button type="button " data-easyfilter="item01" class="btn btn-primary"> Item 01 </button>
+      <button type="button " data-easyfilter="item02" class="btn btn-primary"> Item 02 </button>
+      <button type="button " data-easyfilter="item03" class="btn btn-primary"> Item 03 </button>
+      <br /><br />
+      <div data-easyitem="item01" class="alert alert-danger">Item 01</div>
+      <div data-easyitem="item02" class="alert alert-danger">Item 02</div>
+      <div data-easyitem="item03" class="alert alert-danger">Item 03</div>
+  </div>
+  <h2>With Radio Buttons</h2>
+  <div id="easy-filter-radio" class="row">
+    <div class="col-12">
+                        <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
+                            <label class="btn btn-primary" data-easyfilter="*">
+                              <input type="radio" name="options" id="option1"> All
+                            </label>
+                            <label class="btn btn-primary" data-easyfilter="item11">
+                              <input type="radio" name="options" id="option2"> Item 01
+                            </label>
+                            <label class="btn btn-primary active" data-easyfilter="item12">
+                              <input type="radio" name="options" id="option3" checked> Item 02
+                            </label>
+                            <label class="btn btn-primary" data-easyfilter="item13">
+                              <input type="radio" name="options" id="option3"> Item 03
+                            </label>
+                        </div>
+                    </div>
+                        <div class="col-md-3" data-easyitem="item11">
+                        <div class="alert alert-info">
+                            Item 01
+                        </div>
+                    </div>
+                    <div class="col-md-3" data-easyitem="item12">
+                        <div class="alert alert-warning">
+                            Item 02
+                        </div>
+                    </div>
+                    <div class="col-md-3" data-easyitem="item13">
+                        <div class="alert alert-success">
+                            Item 03
+                        </div>
+                    </div>
+                    <div class="col-md-3" data-easyitem="item11">
+                        <div class="alert alert-info">
+                            Item 01
+                        </div>
+                    </div>
+                    <div class="col-md-3" data-easyitem="item12">
+                        <div class="alert alert-warning">
+                            Item 02
+                        </div>
+                    </div>
+                    <div class="col-md-3" data-easyitem="item13">
+                        <div class="alert alert-success">
+                            Item 03
+                        </div>
+                    </div>
+
+                    <div class="col-md-3" data-easyitem="item11">
+                        <div class="alert alert-info">
+                            Item 01
+                        </div>
+                    </div>
+                    <div class="col-md-3" data-easyitem="item12">
+                        <div class="alert alert-warning">
+                            Item 02
+                        </div>
+                    </div>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="./dist/jquery.easyFilter.js"></script>
+<script>
+  $('#easy-filter-wrap').easyFilter();
+  $('#easy-filter-radio').easyFilter({
+firstFilter: 'item12'
+  });
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script>
+try {
+  fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
+    return true;
+  }).catch(function(e) {
+    var carbonScript = document.createElement("script");
+    carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
+    carbonScript.id = "_carbonads_js";
+    document.getElementById("carbon-block").appendChild(carbonScript);
+  });
+} catch (error) {
+  console.log(error);
+}
+</script>
+</body>
+</html>
