@@ -70,10 +70,10 @@
         <div class="tab-content">
             <div id="tab-1" class="tab-pane" role="tabpanel">
                 <div id="easy-filter-wrap">
-                    <button type="button "data-easyfilter="*"> All </button>
-                    <button type="button "data-easyfilter="item01"> Item 01 </button>
-                    <button type="button "data-easyfilter="item02"> Item 02 </button>
-                    <button type="button "data-easyfilter="item03"> Item 03 </button>
+                    <button type="button" data-easyfilter="*"> All </button>
+                    <button type="button" data-easyfilter="item01"> Item 01 </button>
+                    <button type="button" data-easyfilter="item02"> Item 02 </button>
+                    <button type="button" data-easyfilter="item03"> Item 03 </button>
                     <br /> <br />
                     <div data-easyitem="item01"> Item 01 </div>
                     <div data-easyitem="item02"> Item 02 </div>
