@@ -19,6 +19,7 @@ a {
 
 header {
   background-color: $color1;
+
   .container {
     display: flex;
     flex-direction: row;
@@ -83,52 +84,249 @@ header {
   flex-wrap: wrap;
   height: 450px;
   overflow: hidden;
-  .img{
+
+  .img {
     flex-basis: 65%;
 
-    img{
+    img {
       width: 100%;
     }
   }
-  .form{
+
+  .form {
     flex-basis: 35%;
     background-color: $color1;
     color: #fff;
-    form{
+
+    form {
       padding: 25px;
       margin: 0 auto;
-      h2{
+
+      h2 {
         margin: 5px 0;
         padding: 10px 25px;
       }
-      p{
+
+      p {
         padding: 10px 25px;
         line-height: 2em;
       }
-      input{
+
+      input {
         margin: 25px;
-        width: 70%;
+        width: 90%;
         display: block;
         height: 40px;
         padding: 15px;
+
+        &[type = submit] {
+          width: 25%;
+          height: 50px;
+          border-radius: 8px;
+          margin-top: 0;
+          text-align: center;
+          padding: 5px;
+          float: left;
+          background-color: $darkColor;
+          color: #fff;
+          font-size: 14px;
+          font-weight: 600;
+          border: none;
+        }
       }
+
     }
   }
 }
 
-#services{
+#services {
+  margin-top: 30px;
   height: 100vh;
-  .st-theme-elite{
-    border: 1px solid crimson !important;
+
+  .container {
+    max-width: 70%;
   }
-  .nav{
-    background-color: $color1;
-    .nav-link{
-      color: #FFFFFF;
-      &.active{
-        color: red !important;
+
+  h1 {
+    text-align: center;
+    margin: 25px 0;
+
+    span {
+      color: $color1;
+    }
+  }
+
+  #smarttab {
+    position: relative;
+
+    .border-right {
+      position: absolute;
+      right: 0;
+      border-left: 500px solid #fff;
+      width: 20%;
+      height: 30px;
+      border-top: 25px solid $color1;
+    }
+
+    .border-left {
+      position: absolute;
+      left: 0;
+      border-right: 500px solid #fff;
+      width: 20%;
+      height: 25px;
+      border-top: 18px solid $color1;
+    }
+
+    .tab-content {
+      margin-top: 15px;
+    }
+  }
+
+  #smarttab2, #smarttab1 {
+    border: none;
+
+    .tab-content {
+      margin: 15px auto;
+
+      .tab-pane {
+        padding-bottom: 20px;
       }
     }
   }
 
+  #smarttab, #smarttab2, #smarttab3 {
+    .nav {
+      background-color: $color1;
+      .nav-link {
+        color: #dddddd;
+
+        &.active {
+          color: #fff !important;
+          background-color: $darkColor;
+        }
+      }
+    }
+
+    #easy-filter-wrap {
+      margin: 0 auto;
+      text-align: center;
+
+      & > button {
+        width: 150px;
+        height: 150px;
+        border-radius: 10px;
+        background-color: $color1;
+        color: #fff;
+        cursor: pointer;
+        &.active {
+          background-color: $darkColor;
+        }
+
+        span {
+          width: 100%;
+        }
+      }
+
+      .container {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 30px 15px;
+
+        button {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .card {
+    width: 100%;
+    height: 350px;
+    border-radius: 20px;
+    background: #f5f5f5;
+    position: relative;
+    padding: 1.8rem;
+    border: 2px solid #c3c6ce;
+    transition: 0.5s ease-out;
+    overflow: visible;
+    img{
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      width: 100%;
+      position: absolute;
+      overflow: hidden;
+    }
+    .card-details {
+      color: black;
+      height: 100%;
+      gap: .5em;
+      display: grid;
+      place-content: center;
+    }
+
+    .card-button {
+      transform: translate(-50%, 125%);
+      width: 60%;
+      border-radius: 1rem;
+      border: none;
+      background-color: #008bf8;
+      color: #fff;
+      font-size: 1rem;
+      padding: .5rem 1rem;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      opacity: 0;
+      transition: 0.3s ease-out;
+    }
+
+    .text-body {
+      color: rgb(134, 134, 134);
+      //position: absolute;
+      //z-index: 99;
+    }
+
+    .text-title {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    &:hover {
+      border-color: #008bf8;
+      box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+
+      .card-button {
+        transform: translate(-50%, 50%);
+        opacity: 1;
+      }
+    }
+
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1000px) {
+  .border-left , .border-right{
+    display: none;
+  }
+  #services{
+    .container{
+      max-width: 95%;
+    }
+  }
 }

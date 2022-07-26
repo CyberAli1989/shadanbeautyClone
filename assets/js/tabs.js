@@ -1,5 +1,5 @@
 $(function () {
-  $('#smarttab').smartTab({
+  $('#smarttab , #smarttab1 , #smarttab2 , #smarttab3').smartTab({
     selected: 0, // Initial selected tab, 0 = first tab
     theme: 'basic', // theme, related css need to include for other than default theme
     justified: true, // Nav menu justification. true/false
@@ -22,7 +22,7 @@ $(function () {
       stopOnFocus: true, // Stop auto navigation on focus and resume on outfocus
     },
     keyboard: {
-      keyNavigation: true, // Enable/Disable keyboard navigation(left and right keys are used if enabled)
+      keyNavigation: false, // Enable/Disable keyboard navigation(left and right keys are used if enabled)
       keyLeft: [37, 38], // Left key code
       keyRight: [39, 40], // Right key code
       keyHome: [36], // Home key code
@@ -42,6 +42,11 @@ $(function () {
     },
     getContent: null
   });
+  $('#easy-filter-wrap button').click(function (e) {
+    e.preventDefault();
+    $(this).siblings().removeClass('active');
+    $(this).addClass('active')
+  })
   $('#easy-filter-wrap').easyFilter({
     firstFilter: '*',
     animation: 'slide',

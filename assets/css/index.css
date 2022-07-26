@@ -158,26 +158,175 @@ header .container .social ul li {
 }
 #join .form form input {
   margin: 25px;
-  width: 70%;
+  width: 90%;
   display: block;
   height: 40px;
   padding: 15px;
 }
+#join .form form input[type=submit] {
+  width: 25%;
+  height: 50px;
+  border-radius: 8px;
+  margin-top: 0;
+  text-align: center;
+  padding: 5px;
+  float: left;
+  background-color: #242132;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+}
 
 #services {
+  margin-top: 30px;
   height: 100vh;
 }
-#services .st-theme-elite {
-  border: 1px solid crimson !important;
+#services .container {
+  max-width: 70%;
 }
-#services .nav {
+#services h1 {
+  text-align: center;
+  margin: 25px 0;
+}
+#services h1 span {
+  color: #145858;
+}
+#services #smarttab {
+  position: relative;
+}
+#services #smarttab .border-right {
+  position: absolute;
+  right: 0;
+  border-left: 500px solid #fff;
+  width: 20%;
+  height: 30px;
+  border-top: 25px solid #145858;
+}
+#services #smarttab .border-left {
+  position: absolute;
+  left: 0;
+  border-right: 500px solid #fff;
+  width: 20%;
+  height: 25px;
+  border-top: 18px solid #145858;
+}
+#services #smarttab .tab-content {
+  margin-top: 15px;
+}
+#services #smarttab2, #services #smarttab1 {
+  border: none;
+}
+#services #smarttab2 .tab-content, #services #smarttab1 .tab-content {
+  margin: 15px auto;
+}
+#services #smarttab2 .tab-content .tab-pane, #services #smarttab1 .tab-content .tab-pane {
+  padding-bottom: 20px;
+}
+#services #smarttab .nav, #services #smarttab2 .nav, #services #smarttab3 .nav {
   background-color: #145858;
 }
-#services .nav .nav-link {
-  color: #FFFFFF;
+#services #smarttab .nav .nav-link, #services #smarttab2 .nav .nav-link, #services #smarttab3 .nav .nav-link {
+  color: #dddddd;
 }
-#services .nav .nav-link.active {
-  color: red !important;
+#services #smarttab .nav .nav-link.active, #services #smarttab2 .nav .nav-link.active, #services #smarttab3 .nav .nav-link.active {
+  color: #fff !important;
+  background-color: #242132;
+}
+#services #smarttab #easy-filter-wrap, #services #smarttab2 #easy-filter-wrap, #services #smarttab3 #easy-filter-wrap {
+  margin: 0 auto;
+  text-align: center;
+}
+#services #smarttab #easy-filter-wrap > button, #services #smarttab2 #easy-filter-wrap > button, #services #smarttab3 #easy-filter-wrap > button {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  background-color: #145858;
+  color: #fff;
+  cursor: pointer;
+}
+#services #smarttab #easy-filter-wrap > button.active, #services #smarttab2 #easy-filter-wrap > button.active, #services #smarttab3 #easy-filter-wrap > button.active {
+  background-color: #242132;
+}
+#services #smarttab #easy-filter-wrap > button span, #services #smarttab2 #easy-filter-wrap > button span, #services #smarttab3 #easy-filter-wrap > button span {
+  width: 100%;
+}
+#services #smarttab #easy-filter-wrap .container, #services #smarttab2 #easy-filter-wrap .container, #services #smarttab3 #easy-filter-wrap .container {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 30px 15px;
+}
+#services #smarttab #easy-filter-wrap .container button, #services #smarttab2 #easy-filter-wrap .container button, #services #smarttab3 #easy-filter-wrap .container button {
+  cursor: pointer;
+}
+#services .card {
+  width: 100%;
+  height: 350px;
+  border-radius: 20px;
+  background: #f5f5f5;
+  position: relative;
+  padding: 1.8rem;
+  border: 2px solid #c3c6ce;
+  transition: 0.5s ease-out;
+  overflow: visible;
+}
+#services .card img {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+#services .card .card-details {
+  color: black;
+  height: 100%;
+  gap: 0.5em;
+  display: grid;
+  place-content: center;
+}
+#services .card .card-button {
+  transform: translate(-50%, 125%);
+  width: 60%;
+  border-radius: 1rem;
+  border: none;
+  background-color: #008bf8;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s ease-out;
+}
+#services .card .text-body {
+  color: rgb(134, 134, 134);
+}
+#services .card .text-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+#services .card:hover {
+  border-color: #008bf8;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+#services .card:hover .card-button {
+  transform: translate(-50%, 50%);
+  opacity: 1;
+}
+
+@media (max-width: 1000px) {
+  .border-left, .border-right {
+    display: none;
+  }
+  #services .container {
+    max-width: 95%;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

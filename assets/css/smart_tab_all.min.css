@@ -13,7 +13,7 @@
     --st-border: 1px solid #145858;
     --st-anchor-default-primary-color: #60bef5;
     --st-anchor-default-secondary-color: #dbe0e5;
-    --st-anchor-active-primary-color: red;
+    --st-anchor-active-primary-color: #145858FF;
     --st-anchor-active-secondary-color: #ffffff;
     --st-anchor-disabled-primary-color: #eeeeee;
     --st-anchor-disabled-secondary-color: #dbe0e5;
@@ -33,7 +33,7 @@
 .st > .tab-content {
     position: relative;
     overflow: hidden;
-    height: auto
+    height: auto;
 }
 
 .st > .tab-content > .tab-pane {
@@ -102,7 +102,7 @@
 }
 
 .st.st-vertical > .tab-content {
-    flex: 1 100%
+    flex: 1 100%;
 }
 
 .st.st-justified > .nav .nav-link, .st.st-justified > .nav > li {
